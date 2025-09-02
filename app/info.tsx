@@ -29,7 +29,7 @@ export default function Info() {
             color: "#424441",
           }}
         >
-          Experience Proffessional Delivery Services
+          Experience Proffessional Delivery <Text style={{color:'#439D25'}}>Services</Text>
         </Text>
       </View>
       <View

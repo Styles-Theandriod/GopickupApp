@@ -1,6 +1,9 @@
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { useRouter } from "expo-router";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function Info2() {
+  const router = useRouter();
+
   return (
     <View
       style={{
@@ -20,7 +23,7 @@ export default function Info2() {
       >
         <Text
           style={{
-            fontSize: 46,
+            fontSize: 36,
             fontStyle: "normal",
             textAlign: "center",
             fontWeight: "700",
@@ -28,15 +31,16 @@ export default function Info2() {
             color: "#424441",
           }}
         >
-          Experience Proffessional Delivery Services
+          Seamless Navigation{" "}
+          <Text style={{ color: "#439D25" }}>Procedures</Text>
         </Text>
       </View>
       <View
         style={{ marginTop: 20, alignItems: "center", paddingHorizontal: 20 }}
       >
         <Image
-          source={require("../assets/images/Staff.png")}
-          style={{ width: 315, height: 170 }}
+          source={require("../assets/images/Shipping.png")}
+          style={{ width: 396, height: 349 }}
         />
       </View>
       <View
@@ -63,9 +67,10 @@ export default function Info2() {
             alignItems: "center",
           }}
         >
-          <Text style={{color:'#00000026'}}>Skip</Text>
+          <Text style={{ color: "#00000026" }}>Skip</Text>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={() => router.push("/tabs/TabNavigator")}
           style={{
             borderColor: "#439D25",
             width: 91,
@@ -75,7 +80,11 @@ export default function Info2() {
             alignItems: "center",
           }}
         >
-          <Text style={{color:'#439D25', fontWeight:'700', fontSize:15.83}}>Next</Text>
+          <Text
+            style={{ color: "#439D25", fontWeight: "700", fontSize: 15.83 }}
+          >
+            Next
+          </Text>
         </TouchableOpacity>
       </View>
     </View>
